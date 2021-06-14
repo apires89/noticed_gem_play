@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.notification.subject
   #
   def new_notification
-    @user = params[:user]
+    @user = params[:recipient]
     mail(to: @user.email, subject: "You have a new notification!")
   end
 end

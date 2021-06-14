@@ -5,6 +5,6 @@ class Post < ApplicationRecord
 
   def send_notification
     notification = NewNotification.with(post: self.id)
-    notification.deliver_later(self.user)
+    notification.deliver(self.user)
   end
 end
